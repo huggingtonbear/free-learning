@@ -274,7 +274,7 @@ $('.subscribe form').submit(function(e) {
     var postdata = $('.subscribe form').serialize();
     $.ajax({
         type: 'POST',
-        url: 'assets/subscribe.php',
+        url: 'php/subscribe.php',
         data: postdata,
         dataType: 'json',
         success: function(json) {
