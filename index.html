@@ -59,7 +59,7 @@
 					    </div>
 					</form>
 					</div>
-					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+					
 					<!--End mc_embed_signup-->
 			</div>
 			</div>
@@ -108,7 +108,6 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right main-nav">
 				<li><a href="#book" class="scrollto">Course</a></li>
-				<li><a href="#author" class="scrollto">Authors</a></li>
 				<li><a href="#" class="btn btn-green" data-toggle="modal" data-target="#myModal">Download Course</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
@@ -118,7 +117,7 @@
 <section id="book">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 hidden-sm hidden-xs">
 				<div class="book-preview">
 					<img src="img/imac.png" class="background-device" alt="">
 					<div class="owl-book">
@@ -162,92 +161,13 @@
 			<div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp">
 				<p class="white">You don’t need to ditch your existing Python skills to get started with Web Development.<b> We can show you how, with Flask.</b></p>
 			</div>
-		</div>
-	</div>
-</section>
-<section id="author">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row author">
-					<div class="col-sm-12 author-name">
-						<h1 class="heading wow animated fadeInUp" style="margin-bottom:50px;">Authors:</h1>
-						<h2 class="heading wow animated fadeInUp">Lalith Polepeddi</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="small muted-light wow animated fadeInUp">Lalith Polepeddi has been working with Flask since discovering it to be an easy way to learn about web development. He's written about Flask for Tuts+ and Tech.Pro. Aside from Flask, Lalith is interested in applying computer science to address problems in parallel domains, such as biology.</p>
-					</div>
-				</div>
-				<div class="row author">
-					<div class="col-sm-12 author-name">
-						<h2 class="heading wow animated fadeInUp">Italo Maia</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="small muted-light wow animated fadeInUp">Italo Maia is a full-stack developer with 10 years of experience in creating software for the mobile, Web, and desktop environments, having dedicated most of the last few years to development with Python and web technologies.</p>
-						<p class="small muted-light wow animated fadeInUp">Author of Flask-Empty, a popular skeleton for Flask projects that aggregates good practices and recipes for quick prototyping, he is active in the Brazilian Python communities, having open source tools and libraries available in GitHub and Bitbucket.</p>
-					</div>
-				</div>
-				<div class="row author">
-					<div class="col-sm-12 author-name">
-						<h2 class="heading wow animated fadeInUp">Ferdinando Santacroce</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="small muted-light wow animated fadeInUp">Ferdinando Santacroce is a developer, author, and teacher who loves learning new things. He mainly works on the .NET platform using C, and over the span of his career has allowed COBOL applications to talk with remote services, databases, and electronic devices, such as cash handlers, scanners, and electronic shelf labels. </p>
-						<p class="small muted-light wow animated fadeInUp">Ferdinando loves to teach people, from children to grandpas, and introduces them to the use of computers, the Internet, and new mobile devices. He enjoys writing too; after a hiatus of a few years, he started blogging again about his work and passions, which, according to him, is more or less the same thing.</p>
-					</div>
-				</div>
-				<div class="row author">
-					<div class="col-sm-12 author-name">
-						<h2 class="heading wow animated fadeInUp">Eric Haughee</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="small muted-light wow animated fadeInUp">Eric Haughee is a recent graduate from the University of Tennessee at Chattanooga where he received a Bachelor's degree in Computer Science with a concentration in Application Design. During his time in college, he worked as an intern with companies doing .NET development, PHP development on the LAMP stack, and .NET Pocket PC development. Throughout this time, Eric worked as a contractor using technologies such as PHP and jQuery mobile.</p>
-						<p class="small muted-light wow animated fadeInUp">Upon graduating, he took a position at JP Morgan Chase as an Application Developer and currently works with .NET technologies. Outside of work, Eric dabbles in Ruby, Python, and other technologies for web and application development. He currently resides in Philadelphia, PA. </p>
-					</div>
-				</div>
+			<div class="col-md-offset-3 col-md-6 wow animated fadeInUp text-center-mobile">
+				<a href="#" class="btn btn-white sample-button btn-block text-center"  data-toggle="modal" data-target="#myModal">Download Course</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="call-to-action">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 text-left text-center-mobile wow animated fadeInUp">
-				<h2 class="heading white top-fit">Get The Course for FREE</h2>
-			</div>
-			<div class="col-md-4 text-right wow animated fadeInUp text-center-mobile">
-				<a href="#" class="btn btn-white sample-button" data-toggle="modal" data-target="#myModal">Download Course</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="sample-form">
-	<div class="container">
-		<form id="submit-frm" action="php/sampleMail.php" method="post" class="sample-form">
-			<div class="row">
-				<div class="col-sm-5">
-					<input type="text" class="form-control" name="firstname" placeholder="Name" data-validation="required">
-				</div>
-				<div class="col-sm-5">
-					<input type="text" class="form-control" name="email" placeholder="Email" data-validation="email">
-				</div>
-				<div class="col-sm-2">
-					<input type="submit" class="btn btn-green sign-up-button sample-button-done" value="Subscribe">
-				</div>
-			</div>
-		</form>
-	</div>
-</section>
 
 <footer>
 	<div class="container">
@@ -293,6 +213,7 @@ $('.shadowbox').realshadow({
 </script>
 <script src="js/tooltip.js"></script>
 <script src="js/jquery.form-validator.js"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script src="js/preloader.js"></script>
 <script src="js/main.js"></script>
 <script src="js/bootstrap.min.js"></script>
