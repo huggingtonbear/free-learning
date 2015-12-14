@@ -1,197 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Machine Learning with PacktLib - Packt Publishing</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-
-    <!-- Favicon for Packt Logo -->
-    <link rel="shortcut icon" href="https://d1ldz4te4covpm.cloudfront.net/misc/favicon.ico" type="image/x-icon">
-
-
-    <!-- Devicons -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+	<meta charset="UTF-8">
+	<title>Flask: Building Web Applications</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltip.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
 </head>
-
 <body>
-    <img src="img/logo.png" class="img-responsive" style="position:absolute; top:0; left:0; z-index:3000; margin-top:5px; margin-left:5px;"/>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title" id="myModalLabel" style="font-size: 22px;">We'll email the course to you...</p>
+      </div>
+      <div class="modal-body">
+        <!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+			<form action="//packtpub.us11.list-manage.com/subscribe/post?u=693897ba2220b83ddb807103a&amp;id=285a1cd2fc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll">
+			<div class="mc-field-group form-group">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10">
+				<input type="email" value="" placeholder="Please enter your email address" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+					</div>
+				</div>
+			</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_693897ba2220b83ddb807103a_285a1cd2fc" tabindex="-1" value=""></div>
+			    <div class="clear">
+			    	<div class="row">
+					<div class="col-md-offset-5 col-md-6">
+			    <input type="submit" value="Get FREE course" name="subscribe" id="mc-embedded-subscribe" class="btn btn-green pull-right" style="margin-right: 0px; margin-top: 0px;">
+			    	</div>
+			    	</div>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <span style="font-size:4.5em; font-weight:700;">There's no insight without accuracy</span>
-            <h3>Get FREE access to the new machine learning courses everyone's talking about...</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>
+			</div>
+			    </div>
+			</form>
+			</div>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Access premium machine learning courses <strong>anytime, anywhere</strong>.</h2>
-                    <p class="lead">Covering languages including Python, Scala, R and more, you'll have everything you need to start making god-like predictions</p>
-                    <a href="https://www.packtpub.com/add_to_cart/23569?utm_source=pl-freelearning&amp;utm_medium=CTA&amp;utm_campaign=pl-freelearning" class="btn btn-dark btn-lg">Plans from $9.99 a month - Start your FREE month today</a>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+			<!--End mc_embed_signup-->
+      </div>
+    </div>
+  </div>
+</div>
+<div id="wrapper" class="behind">
+<header>
+	<div class="container">
+			<div class="col-md-6 col-sm-12 wow animated fadeInUp">
+				<div class="intro-book">
+					<img src="img/flask.jpg" alt="" class="shadowbox course-cover">
+				</div>
+			</div>
+			<div class="col-md-6 intro-text hidden-sm hidden-xs wow animated fadeInUp">
+				<h2 class="heading">Flask</h2>
+				<h4 class="subheading">Building Web Applications</h4>
+				<ul>
+					<li>Discover everything you need to know to get started with Flask - models, views, controllers, web templates, forms, validation, and interaction with an API.
+					</li>
+					<li>Build, organize, and deploy a location-based Flask app that retrieves and shows interesting places around the user's location.
+					</li>
+					<li>Finish off with your own unique project as a showcase for your portfolio, based on what you learn during the course.
+					</li></ul>
+				<a href="#book" class="scrollto btn btn-white">About Course</a>
+				<a href="#" class="btn btn-green" data-toggle="modal" data-target="#myModal">Download Course <span class="price">FREE</span></a>
+			</div>
+	</div>
+</header>
 
-    <!-- Services -->
-    <section id="titles" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>From <span class="title-text-styling" style="font-size: .9em;"><i class="devicon-python-plain"></i></span>to <strong>R</strong> we've got you covered</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/5130OS_Python%20Machine%20Learning_.jpg"/></a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781784393908?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3908OS_Machine%20Learning%20with%20R%20-%20Second%20Edition_.jpg"/><a/>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783558742?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" 
-                                src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/8742OS_B02950_Scala%20for%20Machine%20Learning_0.jpg"/></a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781784392772?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2772OS_B03467_Building%20Machine%20Learning%20Systems%20with%20Python,%20Second%20Edition_0.jpg"/></a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783288519?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" 
-                                src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/1900_Machine%20Learning%20with%20Spark_0.jpg"/></a>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6">
-                                <a href="https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783982042?utm_source=pl-freetrial&utm_medium=eBook&utm_campaign=pl-freetrial-ml" target="_blank"><img class="img-responsive shadowbox" src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/2042OS.jpg"/></a>
-                        </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <h3 style="margin-top:30px;">and there's over 3000 more courses waiting for you inside...</h3>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+		</div>
 
-    <!-- Features -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center">
-                    <img src="img/product.png" class="img-responsive"/>
-                </div>
-                <div class="col-lg-6">
-                    <h2>Skills you need to get the job done</h2>
-                    <p class="lead">With monthly plans starting <strong>from $9.99 a month</strong>, there's never been a better time to sign up to PacktLib.</a></p>
-                    <p>
-                    <ul>
-                        <li style="font-size:20px; margin-bottom:10px;">Courses designed to help you learn faster</li>
-                        <li style="font-size:20px; margin-bottom:10px;">Updated with fresh content weekly</li>
-                        <li style="font-size:20px; margin-bottom:10px;">Customize your learning experience</li>
-                        
-                    </ul>
-                    </p>
-                    <a href="https://www.packtpub.com/add_to_cart/23569?utm_source=pl-freelearning&utm_medium=CTA&utm_campaign=pl-freelearning" class="btn btn-dark btn-lg pull-right" style="margin-top:30px;">Start your FREE month today</a>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right main-nav">
+				<li><a href="#book" class="scrollto">Course</a></li>
+				<li><a href="#author" class="scrollto">Authors</a></li>
+				<li><a href="#" class="btn btn-green" data-toggle="modal" data-target="#myModal">Download Course</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+<section id="book">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="book-preview">
+					<img src="img/imac.png" class="background-device" alt="">
+					<div class="owl-book">
+						<div class="item">
+							<img src="img/course_page1.png" alt="">
+							<div class="overlay">
+								<a href="img/course_page1png" class="expand" data-lightbox="book-collection" data-title="Image Caption"><i class="fa fa-expand"></i></a>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/course_page2.png" alt="">
+							<div class="overlay">
+								<a href="img/course_page2.png" class="expand" data-lightbox="book-collection" data-title="Image Caption"><i class="fa fa-expand"></i></a>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/course_page3.png" alt="">
+							<div class="overlay">
+								<a href="img/course_page3.png" class="expand" data-lightbox="book-collection" data-title="Image Caption"><i class="fa fa-expand"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="heading wow animated fadeInUp">About The Course</h2>
+				<h4 class="subheading wow animated fadeInUp">This course will give you a basic grounding in the fundamental concepts of web development with Python, as well as the hands-on experience you need to be able to successfully build web applications with Flask. Show off your data in style!
+				</h4>
+				<p class="small wow animated fadeInUp">We'll start by turning your computer into a modern web development powerhouse, and quickly move beyond static websites to develop a powerful database-backed dynamic Flask application. We won't stop there, because we'll also cover how to implement a full authentication system and integrate with third party APIs - all whilst providing you with hints and tips for expansion and customization along the way.
+				</p>
+				<p class="small wow animated fadeInUp">By the time you finish this course, you will be fully equipped to build your very own custom web applications written in Python.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp">
+				<p class="white">You don’t need to ditch your existing Python skills to get started with Web Development.<b> We can show you how, with Flask.</b></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="author">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row author">
+					<div class="col-sm-12 author-name">
+						<h1 class="heading wow animated fadeInUp" style="margin-bottom:50px;">Authors:</h1>
+						<h2 class="heading wow animated fadeInUp">Lalith Polepeddi</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="small muted-light wow animated fadeInUp">Lalith Polepeddi has been working with Flask since discovering it to be an easy way to learn about web development. He's written about Flask for Tuts+ and Tech.Pro. Aside from Flask, Lalith is interested in applying computer science to address problems in parallel domains, such as biology.</p>
+					</div>
+				</div>
+				<div class="row author">
+					<div class="col-sm-12 author-name">
+						<h2 class="heading wow animated fadeInUp">Italo Maia</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="small muted-light wow animated fadeInUp">Italo Maia is a full-stack developer with 10 years of experience in creating software for the mobile, Web, and desktop environments, having dedicated most of the last few years to development with Python and web technologies.</p>
+						<p class="small muted-light wow animated fadeInUp">Author of Flask-Empty, a popular skeleton for Flask projects that aggregates good practices and recipes for quick prototyping, he is active in the Brazilian Python communities, having open source tools and libraries available in GitHub and Bitbucket.</p>
+					</div>
+				</div>
+				<div class="row author">
+					<div class="col-sm-12 author-name">
+						<h2 class="heading wow animated fadeInUp">Ferdinando Santacroce</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="small muted-light wow animated fadeInUp">Ferdinando Santacroce is a developer, author, and teacher who loves learning new things. He mainly works on the .NET platform using C, and over the span of his career has allowed COBOL applications to talk with remote services, databases, and electronic devices, such as cash handlers, scanners, and electronic shelf labels. </p>
+						<p class="small muted-light wow animated fadeInUp">Ferdinando loves to teach people, from children to grandpas, and introduces them to the use of computers, the Internet, and new mobile devices. He enjoys writing too; after a hiatus of a few years, he started blogging again about his work and passions, which, according to him, is more or less the same thing.</p>
+					</div>
+				</div>
+				<div class="row author">
+					<div class="col-sm-12 author-name">
+						<h2 class="heading wow animated fadeInUp">Eric Haughee</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="small muted-light wow animated fadeInUp">Eric Haughee is a recent graduate from the University of Tennessee at Chattanooga where he received a Bachelor's degree in Computer Science with a concentration in Application Design. During his time in college, he worked as an intern with companies doing .NET development, PHP development on the LAMP stack, and .NET Pocket PC development. Throughout this time, Eric worked as a contractor using technologies such as PHP and jQuery mobile.</p>
+						<p class="small muted-light wow animated fadeInUp">Upon graduating, he took a position at JP Morgan Chase as an Application Developer and currently works with .NET technologies. Outside of work, Eric dabbles in Ruby, Python, and other technologies for web and application development. He currently resides in Philadelphia, PA. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 text-left text-center-mobile wow animated fadeInUp">
+				<h2 class="heading white top-fit">Get The Course for FREE</h2>
+			</div>
+			<div class="col-md-4 text-right wow animated fadeInUp text-center-mobile">
+				<a href="#" class="btn btn-white sample-button" data-toggle="modal" data-target="#myModal">Download Course</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sample-form">
+	<div class="container">
+		<form id="submit-frm" action="php/sampleMail.php" method="post" class="sample-form">
+			<div class="row">
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="firstname" placeholder="Name" data-validation="required">
+				</div>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="email" placeholder="Email" data-validation="email">
+				</div>
+				<div class="col-sm-2">
+					<input type="submit" class="btn btn-green sign-up-button sample-button-done" value="Subscribe">
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 text-left text-center-mobile">
+				<p class="copyright small muted">Copyright © 2015 Packt Publishing - All rights reserved!</p>
+			</div>
+			<div class="col-sm-6 text-right text-center-mobile">
+				<div class="social">
+					<a href="https://www.facebook.com/PacktPub/" class="facebook"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/PacktPub" class="twitter"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+
+<div class="notification-box"><span>Sending...</span></div>
+<div class="mobile-nav">
+	<ul class="menu">
+		
+	</ul>
+</div>
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <ul class="list-inline">
-                        <li>
-                            <a target="_blank" href="https://www.facebook.com/PacktPub/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://twitter.com/PacktPub"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Packt Publishing Limited 2015</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/realshadow-min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.onepagenav.js"></script>
+<script src="js/core.js"></script>
+<script>
+$('.shadowbox').realshadow({
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    followMouse: false,
+    length: 6
 
-    <!-- Shadowbox Script -->
-    <script src="js/realshadow-min.js"></script>
-    <script src="js/shadowbox-settings.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
+});
+</script>
+<script src="js/tooltip.js"></script>
+<script src="js/jquery.form-validator.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
